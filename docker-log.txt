@@ -1,0 +1,61 @@
+2021-01-12 04:09:06,726 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+2021-01-12 04:09:06,729 INFO supervisord started with pid 8
+2021-01-12 04:09:07,733 INFO spawned: 'xvfb' with pid 10
+2021-01-12 04:09:07,737 INFO spawned: 'selenium-standalone' with pid 11
+04:09:08.076 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+2021-01-12 04:09:08,078 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2021-01-12 04:09:08,078 INFO success: selenium-standalone entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+04:09:08.175 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2021-01-12 04:09:08.236:INFO::main: Logging initialized @483ms to org.seleniumhq.jetty9.util.log.StdErrLog
+04:09:08.513 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+04:09:08.643 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+04:09:09.829 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptInsecureCerts": true,
+  "browserName": "chrome",
+  "goog:chromeOptions": {
+    "args": [
+      "--enable-automation",
+      "--disable-popup-blocking",
+      "--disable-extensions",
+      "--disable-background-networking",
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-sync",
+      "--metrics-recording-only",
+      "--disable-default-apps",
+      "--mute-audio",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-hang-monitor",
+      "--disable-prompt-on-repost",
+      "--disable-client-side-phishing-detection",
+      "--password-store=basic",
+      "--use-mock-keychain",
+      "--disable-component-extensions-with-background-pages",
+      "--disable-breakpad",
+      "--disable-dev-shm-usage",
+      "--disable-ipc-flooding-protection",
+      "--disable-renderer-backgrounding",
+      "--force-fieldtrials=*BackgroundTracing\u002fdefault\u002f",
+      "--enable-features=NetworkService,NetworkServiceInProcess",
+      "--disable-features=site-per-process,TranslateUI,BlinkGenPropertyTrees",
+      "--window-position=0,0",
+      "--window-size=1200,900"
+    ]
+  }
+}
+04:09:09.830 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 16094
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1610424549.861][SEVERE]: bind() failed: Cannot asChsriogmne Drreiqvueers tweads  asdtdarretsesd  (s9u9c)c
+essfully.
+04:09:10.540 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+04:09:10.593 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 897875168c891baab719ed70fc1b980d (org.openqa.selenium.chrome.ChromeDriverService)
+04:09:12.151 INFO [ActiveSessions$1.onStop] - Removing session 897875168c891baab719ed70fc1b980d (org.openqa.selenium.chrome.ChromeDriverService)
+Trapped SIGTERM/SIGINT/x so shutting down supervisord...
+2021-01-12 04:09:13,154 WARN received SIGTERM indicating exit request
+2021-01-12 04:09:13,155 INFO waiting for xvfb, selenium-standalone to die
+2021-01-12 04:09:14,158 INFO stopped: selenium-standalone (terminated by SIGTERM)
+2021-01-12 04:09:15,161 INFO stopped: xvfb (terminated by SIGTERM)
+Shutdown complete
