@@ -45,64 +45,73 @@ class HomeScreen extends Page {
     keywordSearch(keyword) {
         this.keyword = keyword;
         if (this.searchBarInput.isExisting()) {
-            console.log('Before setValue');
-            browser.pause(5000);
+            browser.pause(2000);
             this.searchBarInput.setValue(keyword);
-            browser.pause(5000);
-            console.log('Before click on input bar');
+            browser.pause(2000);
+            console.log('Value has been set');
             this.searchBarInput.click();
-            browser.pause(5000);
-            console.log('Clicked on the search ICON');
+            browser.pause(1000);
             browser.keys('Enter');
-            console.log('Clicked on the ENTER ICON');
+            console.log('Clicked on the ENTER button');
+            browser.pause(5000);
+            return true;
+        } else {
+            console.error('No Search bar to enter the keyword');
+            return false;
         }
-        browser.pause(10000);
     }
 
     verifyProductListing() {
         let val = true;
         console.log(`Verifying the keyword: ${this.keyword}`);
-        const header = this.productHeader.getText();
-        if (!header || header.toLowerCase() !== this.keyword.toLowerCase()) {
-            console.log('Title not matching: ' + this.productHeader.getText());
+        if (this.productHeader.isDisplayed()) {
+            const header = this.productHeader.getText();
+            if (!header || header.toLowerCase() !== this.keyword.toLowerCase()) {
+                console.log('Title not matching: ' + this.productHeader.getText());
+                val = false;
+            }
+            if (this.productList.length === 0) {  
+                val = false;
+            }
+            console.log('Product list length: ' + this.productList.length);
+            browser.pause(2000);
+        } else {
             val = false;
         }
-        if (this.productList.length === 0) {  
-            val = false;
-        }
-        console.log('Product list length: ' + this.productList.length);
-        browser.pause(5000);
         return val;
     }
 
     clickWishlistIcon() {
         if (this.productList.length > 0) {
             this.productList[0].$(this.WISHLIST_ICON).click();
+            browser.pause(2000);
+            return true;
         } else {
             console.error('There are no products to click on the wishlist icon');
+            return false;
         }
-        browser.pause(5000);
     }
 
     verifyWishlistCounter() {
         let val = true;
-        if (this.productList[0].$(this.WISHLIST_ICON).isExisting()) {
-            const wishlistIconElement = this.productList[0].$(this.WISHLIST_ICON + ' svg');
-            const filedValue = wishlistIconElement.getAttribute('data-filled');
-            console.log('Is icon filed: ' + filedValue);
-            if (filedValue !== 'true') {
-                val = false;
-            }
-        }
         if (val && this.wishlistCounter.isExisting()) {
             const counter = this.wishlistCounter.getText();
             if (counter === '1') {
                 console.log('Product added to wishlist.')
             }
+            if (this.productList[0].$(this.WISHLIST_ICON).isExisting()) {
+                const wishlistIconElement = this.productList[0].$(this.WISHLIST_ICON + ' svg');
+                const filedValue = wishlistIconElement.getAttribute('data-filled');
+                console.log('Is icon filed: ' + filedValue);
+                if (filedValue !== 'true') {
+                    val = false;
+                }
+            }
         } else {
             val = false;
             console.error('There are no products to added on the wishlist icon');
         }
+        return val;
     }
 
     moveToWishlistPage() {

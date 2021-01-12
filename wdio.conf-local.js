@@ -7,10 +7,10 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-    automationProtocol: 'webdriver',
-    hostname: 'localhost',
-    port: 4444,
-    path: '/wd/hub',
+    // automationProtocol: 'webdriver',
+    // hostname: 'localhost',
+    // port: 4444,
+    // path: '/wd/hub',
     //
     // ==================
     // Specify Test Files
@@ -121,17 +121,17 @@ exports.config = {
         //     args: ['--debug']
         // }]
         // 'selenium-standalone'
-        'docker'
+        // 'docker'
     ],
-    dockerLogs: './',
-    dockerOptions: {
-        image: 'selenium/standalone-chrome',
-        healthCheck: 'http://localhost:4444',
-        options: {
-            p: ['4444:4444'],
-            shmSize: '2g'
-        }
-    },
+    // dockerLogs: './',
+    // dockerOptions: {
+    //     image: 'selenium/standalone-chrome',
+    //     healthCheck: 'http://localhost:4444',
+    //     options: {
+    //         p: ['4444:4444'],
+    //         shmSize: '2g'
+    //     }
+    // },
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

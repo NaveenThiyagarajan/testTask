@@ -22,7 +22,6 @@ class Login extends Page {
         if (this.loginOverlay.isExisting()) {
             val = true;
         }
-
         return val;
     }
 
@@ -33,17 +32,19 @@ class Login extends Page {
             browser.pause(3000);
             val = true;
         }
-
         return val;
     }
 
-    enterCreds() {
-        this.enterEmail.setValue('naveen11.gct@gmail.com');
+    enterCreds(credential) {
+        const userName = credential.split(':')[0];
+        const password = credential.split(':')[1];
+        this.enterEmail.setValue(userName);
         browser.pause(1000);
-        this.enterPass.setValue('westwing1');
+        this.enterPass.setValue(password);
         browser.pause(1000);
         this.submitLogin.click();
-        browser.pause(5000);
+        browser.pause(2000);
+        return true;
     }
 }
 
