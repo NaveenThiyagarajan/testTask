@@ -1,30 +1,30 @@
-2021-01-12 18:56:07,251 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
-2021-01-12 18:56:07,255 INFO supervisord started with pid 8
-2021-01-12 18:56:08,229 INFO spawned: 'xvfb' with pid 10
-2021-01-12 18:56:08,235 INFO spawned: 'selenium-standalone' with pid 11
-18:56:08.900 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-2021-01-12 18:56:08,904 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
-2021-01-12 18:56:08,905 INFO success: selenium-standalone entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
-18:56:09.173 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2021-01-12 18:56:09.303:INFO::main: Logging initialized @1050ms to org.seleniumhq.jetty9.util.log.StdErrLog
-18:56:10.005 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-18:56:10.266 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-18:56:11.745 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+2021-01-13 20:32:24,775 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+2021-01-13 20:32:24,782 INFO supervisord started with pid 9
+2021-01-13 20:32:25,788 INFO spawned: 'xvfb' with pid 11
+2021-01-13 20:32:25,794 INFO spawned: 'selenium-standalone' with pid 12
+20:32:26.106 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+2021-01-13 20:32:26,108 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2021-01-13 20:32:26,109 INFO success: selenium-standalone entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+20:32:26.242 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2021-01-13 20:32:26.304:INFO::main: Logging initialized @486ms to org.seleniumhq.jetty9.util.log.StdErrLog
+20:32:26.629 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+20:32:26.764 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+20:32:30.673 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "acceptInsecureCerts": true,
   "browserName": "chrome"
 }
-18:56:11.752 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 11348
+20:32:30.675 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 32584
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-[1610477771.978][SEVERE]: bind() failed: Cannot assign requested address (99)
 ChromeDriver was started successfully.
-18:56:16.496 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
-18:56:16.622 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session e37a19b8f0d2681cb6a80a23d164f228 (org.openqa.selenium.chrome.ChromeDriverService)
-18:57:03.358 INFO [ActiveSessions$1.onStop] - Removing session e37a19b8f0d2681cb6a80a23d164f228 (org.openqa.selenium.chrome.ChromeDriverService)
+[1610569950.834][SEVERE]: bind() failed: Cannot assign requested address (99)
+20:32:33.971 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+20:32:34.022 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session c1608a3b5bbed877877a5daab844e04c (org.openqa.selenium.chrome.ChromeDriverService)
+20:33:40.880 INFO [ActiveSessions$1.onStop] - Removing session c1608a3b5bbed877877a5daab844e04c (org.openqa.selenium.chrome.ChromeDriverService)
 Trapped SIGTERM/SIGINT/x so shutting down supervisord...
-2021-01-12 18:57:04,412 WARN received SIGTERM indicating exit request
-2021-01-12 18:57:04,453 INFO waiting for xvfb, selenium-standalone to die
-2021-01-12 18:57:05,489 INFO stopped: selenium-standalone (terminated by SIGTERM)
-2021-01-12 18:57:05,518 INFO stopped: xvfb (terminated by SIGTERM)
+2021-01-13 20:33:41,885 WARN received SIGTERM indicating exit request
+2021-01-13 20:33:41,893 INFO waiting for xvfb, selenium-standalone to die
+2021-01-13 20:33:42,904 INFO stopped: selenium-standalone (terminated by SIGTERM)
+2021-01-13 20:33:42,913 INFO stopped: xvfb (terminated by SIGTERM)
 Shutdown complete

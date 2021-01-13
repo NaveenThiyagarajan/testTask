@@ -1,4 +1,4 @@
-import { Given, When, Then } from 'cucumber';
+import { Given, When, Then, After, Status } from 'cucumber';
 import { expect } from 'chai';
 import Page from './../pages/page';
 import homeScreen from './../pages/homescreen.page';
@@ -51,4 +51,11 @@ Then(/^I go to the wishlist page$/, () => {
 Then(/^I delete the product from my wishlist$/, () => { 
     expect(wishlist.removeItem(),'Failed to remove the favorite product').to.be.true; 
     browser.pause(2000);
+});
+
+After((scenario) => {
+    if (Status.FAILED === scenario.result.status) {
+        browser.takeScreenshot();
+        console.log('Scenario Failed. Screenshot taken');
+    }
 });

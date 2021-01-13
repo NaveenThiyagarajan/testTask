@@ -7,10 +7,10 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-    automationProtocol: 'webdriver',
-    hostname: 'localhost',
-    port: 4444,
-    path: '/wd/hub',
+    // automationProtocol: 'webdriver',
+    // hostname: '127.0.0.1',
+    // port: 4444,
+    // path: '/wd/hub',
     //
     // ==================
     // Specify Test Files
@@ -74,7 +74,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'debug',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -121,17 +121,17 @@ exports.config = {
         //     args: ['--debug']
         // }]
         // 'selenium-standalone'
-        'docker'
+        // 'docker'
     ],
-    dockerLogs: './',
-    dockerOptions: {
-        image: 'selenium/standalone-chrome',
-        healthCheck: 'http://localhost:4444',
-        options: {
-            p: ['4444:4444'],
-            shmSize: '2g'
-        }
-    },
+    // dockerLogs: './',
+    // dockerOptions: {
+    //     image: 'selenium/standalone-chrome',
+    //     healthCheck: 'http://localhost:4444',
+    //     options: {
+    //         p: ['4444:4444'],
+    //         shmSize: '2g'
+    //     }
+    // },
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -153,7 +153,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec','dot'],
+    reporters: ['spec'],
     
     // ['allure', {outputDir: 'allure-results'}],'json','cucumber'],
 

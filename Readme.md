@@ -7,5 +7,5 @@
 2. Navigate to the cloned project root folder
 3. Perform `npm install` to ger all the dependencies. This is one time step.
 4. Two options to run the test.
-    1. using `npm test` command which picks the `wdio.conf.js` and runs the test on the `selenium/standalone-chrome` docker image. NOTE: First time execution would take time to download the image.
-    2. using `npm test wdio.conf-local.js` command would run the test using `dev-tools` protocal on puppeter.
+    1. using `npm test` command would run the test using `dev-tools` protocal on puppeter.
+    2. using `npm test wdio.conf-docker.js` command which picks the `wdio.conf-docker.js` would run the test on `selenium/standalone-chrome` docker image. NOTE: First time execution would take time to download the image.
